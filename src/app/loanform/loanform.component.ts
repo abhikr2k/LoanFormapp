@@ -19,11 +19,22 @@ export class LoanformComponent implements OnInit {
   }
 
 
-  onSave()
+   onSave()
   {
     console.log("Button clicked");
-    if(this.sal>100000||this.sal>this.loanamount){
+    if(this.sal>100000&&this.sal>this.loanamount && this.sal<500000){
+      this.res="Customer is Eligible for loan upto 2 lakhs";
+      alert("Eligible Congratulations");
+    }
+
+    
+    else if(this.sal>500000&&this.sal>this.loanamount&& this.sal<1000000){
       this.res="Customer is Eligible for loan upto 5 lakhs";
+      alert("Eligible Congratulations");
+    }
+
+    else if(this.sal>1000000&&this.sal>this.loanamount){
+      this.res="Customer is Eligible for loan upto 10 lakhs";
       alert("Eligible Congratulations");
     }
     else{
