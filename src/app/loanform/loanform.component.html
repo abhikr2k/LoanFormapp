@@ -1,0 +1,101 @@
+<div class="container">
+
+    <form action="form.html" method="POST">
+        <h1>Loan Application</h1>
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="first name">First Name</label>
+            <input type="text" name="first-name" />
+            <label for="middle initial">Middle Initial</label>
+            <input type="text" name="middle initial" />
+            <label for="last name">Last Name</label>
+            <input type="text" name="last-name" />
+            <br/>
+            <label for="email address">Email</label>
+            <input type="text" name="email" placeholder="janedoe31@yahoo.com" />
+            <label for="telephone">Contact Number</label>
+            <input type="text" name="telephone" />
+            <br/>
+            <label for="home address">Home Address</label>
+            <input type="text" name="address" />
+        </fieldset>
+        <fieldset>
+            <legend>Work Information</legend>
+            <label for="occupation">Current Occupation
+            <input type="text" name="occupation" />
+        </label>
+
+            <br>
+            <label for="salary"> Annual salary
+
+            <input id="sal" type="number" value="amount" required
+            
+            [(ngModel)]="sal" name="salary" />
+        </label>
+
+            <br>
+            <label for="company name">Employer Name 
+            <input type="text" name="company name" />
+        </label>
+
+            <br>
+            <label for="company location">Employer Address</label>
+            <input type="text" name="company location" />
+        </fieldset>
+        <div class="valid">
+            <fieldset>
+                <legend>Loan Type & Amount</legend>
+
+
+                <br/>
+                <label for="loan amount">Loan Amount</label>
+
+                <input type="number" [(ngModel)]="loanamount" required value="amount" name="loan amount" />
+            </fieldset>
+        </div>
+        <fieldset>
+            <legend>Length of Loan</legend>
+            <input type="radio" name="length-of-time" value="5">5
+            <input type="radio" name="length-of-time" value="15">15
+            <input type="radio" name="length-of-time" value="30">30
+        </fieldset>
+        <fieldset>
+            <legend>Marital Status</legend>
+            <input type="checkbox" name="status" value="single">Single
+            <input type="checkbox" name="status" value="married">Married
+            <input type="checkbox" name="status" value="divorced">Divorced
+        </fieldset>
+        <fieldset>
+            <legend>Special Considerations</legend>
+            <label for="down payment">Down Payment</label>
+            <input type="text" name="down payment" />
+            <input type="checkbox" name="out-of-state" value="out-of-state">Out of State Resident
+            <input type="checkbox" name="cosigner" value="cosigner">Cosigner
+            <br/>
+            <label for="name">Name of Cosigner</label>
+            <input type="text" name="name-of-cosigner" />
+            <label for="occupation">Cosigner Occupation</label>
+            <input type="text" name="occupation" />
+        </fieldset>
+        <fieldset>
+            <legend>Comments</legend>
+            <textarea name='comment' name='comment'></textarea>
+
+
+        </fieldset>
+
+        <button type="submit" [disabled]="isDisabled" (click)="onSave()">Submit</button>
+        <!-- <button onclick="myfuction()" type="submit">Submit</button> -->
+
+
+    </form>
+
+
+    <h1>Application Submitted{{res}}</h1>
+
+
+
+
+    <script>
+    </script>
+</div>
